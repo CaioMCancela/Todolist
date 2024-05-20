@@ -1,0 +1,94 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #448FB7;
+    width: 100vw;
+    height: 100vh;
+}
+.Interação{
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+    background-color: #fff;
+}
+#info{
+    text-align: center;
+}
+
+#info h1{
+    font-size: 2rem;
+    margin: 5px;
+}
+#info input{
+    width: 95%;
+    height: 30px;
+    border: 2px solid #c4ae89;
+    font-size: 1rem;
+    text-align: center;
+    color: #0067c7;
+}
+#info button{
+    width: 4%;
+    height: 34px;
+    background-color:#448FB7;
+    border: none;
+    font-size: 1rem;
+    color: #fff;
+}
+#info .linha{
+    margin-top: 10px;
+    margin: 10px 10px 0 10px;
+}
+#tarefas{
+    margin:0 10px 10px 10px;
+}
+.tarefa{
+    display:grid;
+    grid-template-areas: 
+        "checkbox texto edit delete"
+        "linha linha linha linha";
+    grid-template-columns: 20px 5fr 40px 40px;
+}
+.checkbox{
+    grid-area: checkbox;
+}
+.texto{
+    width: 95%;
+    height: 30px;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #448FB7;
+    grid-area: span;
+}
+input[type="checkbox"]:checked + .texto {
+    text-decoration: line-through;
+}
+.edit{
+    background-color: #fff;
+    border: none;
+    width: 3%;
+    height: 30px;
+    margin: 0 10px;
+    font-size: 16px;
+    grid-area: edit;
+}
+.delete{
+    background-color: #fff;
+    color: #858484;
+    border: none;
+    width: 3%;
+    height: 30px;
+    margin: 0 10px;
+    font-size: 24px;
+    grid-area: delete;
+
+}
+.linha{
+    border: 1px solid #f2f2f2;
+    grid-area: linha;
+}
